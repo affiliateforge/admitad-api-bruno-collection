@@ -1,0 +1,26 @@
+meta {
+  name: List coupons for the ad space
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{HOST}}/coupons/website/{{ADSPACE_ID}}/
+  body: none
+  auth: inherit
+}
+
+query {
+  ~limit: 
+  ~offset: 
+  ~campaign: 
+  ~category: 
+  ~campaign_category: 
+  ~type: 
+  ~search: 
+  ~date_start: 
+  ~date_end: 
+  ~order_by: 
+  ~region: 
+  ~language: 
+}
