@@ -1,0 +1,40 @@
+meta {
+  name: List of coupons
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{HOST}}/coupons/
+  body: none
+  auth: inherit
+}
+
+query {
+  ~campaign: 
+  ~category: 
+  ~campaign_category: 
+  ~type: 
+  ~search: 
+  ~date_start: 
+  ~date_end: 
+  ~offset: 
+  ~limit: 
+  ~order_by: 
+  ~region: 
+  ~language: 
+}
+
+docs {
+  # List Coupons
+  
+  Returns the list of publisher's coupons in JSON format.
+  
+  - [Admitad documentation on method List Coupons](https://developers.admitad.com/hc/en-us/articles/7930482029585-Coupons)
+  
+  ## Parameter Request List
+  
+  - `campaign`
+    - Type: `integer`
+    - Allowed values: [List of affiliate programs](https://developers.admitad.com/hc/en-us/articles/7930565454353-Affiliate-programs#list-affiliate-programs)
+}

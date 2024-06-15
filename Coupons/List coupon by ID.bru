@@ -1,0 +1,25 @@
+meta {
+  name: List coupon by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{HOST}}/coupons/748737/
+  body: none
+  auth: inherit
+}
+
+docs {
+  # List Coupons
+  
+  Returns the list of publisher's coupons in JSON format.
+  
+  - [Admitad documentation on method List Coupons](https://developers.admitad.com/hc/en-us/articles/7930482029585-Coupons)
+  
+  ## Parameter Request List
+  
+  - `campaign`
+    - Type: `integer`
+    - Allowed values: [List of affiliate programs](https://developers.admitad.com/hc/en-us/articles/7930565454353-Affiliate-programs#list-affiliate-programs)
+}
