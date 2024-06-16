@@ -1,8 +1,7 @@
 auth {
-  mode: basic
+  mode: bearer
 }
 
-auth:basic {
-  username: {{CLIENT_ID}}
-  password: {{CLIENT_SECRET}}
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
 }
