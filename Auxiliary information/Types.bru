@@ -1,0 +1,57 @@
+meta {
+  name: Types
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{HOST}}/websites/kinds/?offset=0&limit=500
+  body: none
+  auth: inherit
+}
+
+query {
+  offset: 0
+  limit: 500
+}
+
+docs {
+  # Types of ad spaces
+  
+  Documentaion: https://developers.admitad.com/hc/en-us/articles/7930496407825#types-of-ad-spaces
+  
+  ## Parameters
+  
+  - HTTP method: GET
+  - URL: https://api.admitad.com/websites/kinds/
+  - Parameters:
+     - `offset`
+     - `limit`
+  - Access rights: public_data
+  - Note: Returns the types of ad spaces
+  
+  ## Example of use
+  Example of a request with utility ``curl``:
+  ```shell
+  curl -L -H 'Authorization: Bearer access_token' -X GET https://api.admitad.com/websites/kinds/
+  ```
+  
+  Example of the response from the API server in the JSON format:
+  ```json
+  {
+      "results": [
+          "website",
+          "doorway",
+          "contextual",
+          "social_app",
+          "social_group"
+      ],
+      "_meta": {
+          "count": 7,
+          "limit": 5,
+          "offset": 0
+      }
+  }
+  ```
+  
+}

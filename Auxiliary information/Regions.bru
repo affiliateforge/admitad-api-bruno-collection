@@ -1,0 +1,57 @@
+meta {
+  name: Regions
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{HOST}}/websites/regions/?offset=0&limit=500
+  body: none
+  auth: inherit
+}
+
+query {
+  offset: 0
+  limit: 500
+}
+
+docs {
+  # Ad space regions
+  Documentation: https://developers.admitad.com/hc/en-us/articles/7930496407825#types-of-ad-spaces
+  
+  ## Parameters
+  - **HTTP method:** GET
+  - **URL:** https://api.admitad.com/websites/regions/
+  - **Parameters:**
+     - offset
+     - limit
+  - **Access rights:** public_data
+  - Note: Returns the list of regions
+  
+  ## Example of use
+  Example of a request with utility ``curl``:
+  ```shell
+  curl -L -H 'Authorization: Bearer access_token' -X GET https://api.admitad.com/websites/regions/
+  ```
+  
+  Example of the response from the API server in the JSON format:
+  ```json
+  {
+      "results": [
+          "RU",
+          "UA",
+          "BY"
+      ],
+      "_meta": {
+          "count": 20,
+          "limit": 3,
+          "offset": 0
+      }
+  }
+  ```
+  
+  ## Additional regions
+  - 01 — CIS
+  - 00 — All
+  
+}
